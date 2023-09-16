@@ -1,22 +1,26 @@
+include <stdio.h>
+#include <stdlib.h>
 
-function setup() {
-
-createCanvas(400, 400);
-
-background("white");
-
+void consumirMemoria(){
+ double *ptr;
+  while(1){
+   ptr = malloc(1000);
+  }
 }
 
-function draw() {
+int main(){
+ 
+ int menu;
+ 
+  printf("Dite 1 para executar || Digite 2 para sair: ");
+  scanf("%i", &menu);
+  
+  if(menu == 1){
+   consumirMemoria();
+  }else{
+   printf("\nSaindo do sistema...\n\n");
+  }
 
-stroke("white");
-
-fill("black");
-
-if(mouseIsPressed === false){
-
-rect(mouseY, mouseX,20, 35);
-
-}
-
+ system("pause");
+return 0; 
 }
